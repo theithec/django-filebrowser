@@ -38,7 +38,7 @@ class FileBrowseWidget(Input):
             value = ""
         if value != "" and not isinstance(value, FileObject):
             value = FileObject(value, site=self.site)
-        final_attrs = self.build_attrs(attrs, extra_attrs={"type":self.input_type,"name":name})
+        final_attrs = self.build_attrs(attrs, extra_attrs={"type": self.input_type, "name": name})
 
 
         final_attrs['url'] = url
@@ -160,7 +160,7 @@ class FileBrowseUploadWidget(Input):
             value = ""
         if value != "" and not isinstance(value, FileObject):
             value = FileObject(value, site=self.site)
-        # https://github.com/sehmaschine/django-filebrowser/issues/330
+        final_attrs = self.build_attrs(attrs, extra_attrs={"type": self.input_type, "name": name})
         final_attrs = self.build_attrs(attrs, extra_attrs={"type":self.input_type,"name":name})
         final_attrs['search_icon'] = '/static/filebrowser/img/filebrowser_icon_show.gif'
         final_attrs['url'] = url

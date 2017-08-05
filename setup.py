@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name='django-filebrowser',
-    version='4.0-dev',
+    version='4.1-dev',
     description='Media-Management with Grappelli',
     long_description=read('README.rst'),
     url='http://django-filebrowser.readthedocs.org',
